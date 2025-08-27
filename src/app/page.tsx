@@ -19,7 +19,7 @@ export default function Home() {
       {/* Content layer */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-between py-10">
         {/* Top logo */}
-        <div className="pt-4">
+        <div className="pt-6">
           <Image src="/TopLogo.png" alt="Top logo" width={72} height={72} priority />
         </div>
 
@@ -43,19 +43,19 @@ export default function Home() {
           <p className="text-2xl md:text-3xl font-light mt-4">
             And we want you in it.
           </p>
+          <p className="text-2xl md:text-3xl font-light mt-4">
+            Not as a customer,  as a fellow visionary.
+          </p>
          
 
           <div className="h-6" />
 
-          <p className="text-2xl md:text-3xl font-light mt-4">
-            Not as a customer,  as a fellow visionary.
-          </p>
 
           <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
             Together, we&#39;re not just changing the way we live.
           </p>
           <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
-            We&#39;re creating something so big, it becomes culture.
+            We&#39;re creating something so big, it becomes <span className="italic">culture</span>.
           </p>
         </div>
 

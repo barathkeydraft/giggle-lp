@@ -17,8 +17,8 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-black/30" /> */}
         </div>
         {/* Transparent, slimmer menu bar */}
-        <div className="relative z-10 w-full px-0 pt-4">
-          <div className="w-full rounded-[24px] border border-white/20 bg-white/12 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] flex items-center justify-between px-5 sm:px-8 py-2 entrance-slide-in-top">
+        <div className="relative z-10 w-full px-4 pt-4">
+          <div className="w-full h-25 rounded-[36px] border border-white/20 bg-white/12 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.25)] flex items-center justify-between px-5 sm:px-8 entrance-slide-in-top">
             <div className="flex items-center gap-3">
               <Image src="/NameLogo.png" alt="giggle" width={110} height={32} className="entrance-scale-in entrance-stagger-1" />
             </div>
@@ -40,17 +40,17 @@ export default function HomePage() {
               <h2 className="mt-6 text-xl sm:text-3xl font-light leading-tight text-white/95 font-poppins">
                 Welcome to <span className="font-semibold">giggle</span>, a unified place to
               </h2>
-              <p className="mt-4 text-lg sm:text-3xl font-black tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] font-poppins" style={{ marginLeft: '17rem', fontWeight: '700' }}>
+              <p className="mt-4 text-lg sm:text-3xl font-black tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] font-poppins" style={{ marginLeft: '16rem', fontWeight: '700' }}>
                 GET SH*T DONE
               </p>
-              <p className="mt-8 text-lg text-white max-w-xl font-poppins italic " style={{ fontWeight: '500' }}>
+              <p className="mt-8 text-lg text-white max-w-xl font-poppins italic " style={{ fontWeight: '500', color: '#484848' }}>
                 Find prospects, organize work, create teams; <br />all in a single place.
               </p>
-                             <div className="text-center">
-                 <a href="#contact" className="mt-10 inline-flex items-center rounded-[20px] bg-black hover:bg-black text-white px-8 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition entrance-scale-in entrance-stagger-4 font-poppins" style={{ fontWeight: '600', borderRadius: '35px' }}>
-                   Join wait-list
-                 </a>
-               </div>
+              <div className="text-center">
+                <a href="#contact" className="mt-10 inline-flex items-center rounded-[20px] bg-black hover:bg-black text-white px-14 py-2 shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition entrance-scale-in entrance-stagger-4 font-poppins" style={{ fontWeight: '600', borderRadius: '25px', height: '60px' }}>
+                  Join wait-list
+                </a>
+              </div>
             </div>
 
             {/* Right card stack */}
@@ -67,24 +67,24 @@ export default function HomePage() {
                 <div className="mt-4 space-y-4">
                   <div className="rounded-[14px] bg-white text-[#0f1231] shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex items-center justify-between px-5 py-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1 cursor-pointer group/card entrance-scale-in entrance-stagger-4">
                     <div className="flex items-center gap-3">
-                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#e8e9ff] text-[#5b5bf1] font-bold transition-transform duration-300 group-hover/card:scale-110">📄</span>
+                      <Image src="/contract_edit.svg" alt="Contract" width={24} height={24} />
                       <span className="font-medium font-poppins">Contract Signed</span>
                     </div>
                     <span className="text-sm text-black/50 font-poppins">2 days ago</span>
                   </div>
                   <div className="rounded-[14px] bg-white text-[#0f1231] shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex items-center justify-between px-5 py-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1 cursor-pointer group/card entrance-scale-in entrance-stagger-5">
                     <div className="flex items-center gap-3">
-                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#fff1db] text-[#ff8f23] font-bold transition-transform duration-300 group-hover/card:scale-110">🧩</span>
+                      <Image src="/draw.svg" alt="Design Phase" width={20} height={20} />
                       <span className="font-medium font-poppins">Design Phase Started</span>
                     </div>
                     <span className="text-sm text-black/50 font-poppins">1 days ago</span>
                   </div>
                   <div className="rounded-[14px] bg-white text-[#0f1231] shadow-[0_10px_25px_rgba(0,0,0,0.18)] flex items-center justify-between px-5 py-4 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_15px_35px_rgba(0,0,0,0.25)] hover:-translate-y-1 cursor-pointer group/card entrance-scale-in entrance-stagger-6">
                     <div className="flex items-center gap-3">
-                      <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-[#eef2ff] text-[#5960ff] font-bold transition-transform duration-300 group-hover/card:scale-110">⏲️</span>
-                      <span className="font-medium font-poppins">Client Review Pending</span>
+                      <Image src="/acute.svg" alt="Client Review Pending" width={24} height={24} />
+                      <span className="font-medium font-poppins" style={{ fontWeight: '500', color: '#757575' }}>Client Review Pending</span>
                     </div>
-                    <span className="text-sm text-black/50 font-poppins" style={{ fontWeight: '400' }}>Now</span>
+                    <span className="text-sm text-black/50 font-poppins" >Now</span>
                   </div>
                 </div>
               </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
               </div>
               <h4 className="text-xl font-semibold">Endless email
                 <br />threads & missed files</h4>
-              <p className="mt-4 text-white/70 text-sm">Important project updates buried in cluttered inboxes</p>
+              <p className="mt-4 text-white/70 text-sm">Important project updates <br />buried in cluttered inboxes</p>
             </div>
 
             {/* Card 2 */}
@@ -136,7 +136,7 @@ export default function HomePage() {
               </div>
               <h4 className="text-xl font-semibold">Disconnected invoicing
                 <br />& payment status</h4>
-              <p className="mt-4 text-white/70 text-sm">Chasing payments across multiple platforms and spreadsheets</p>
+              <p className="mt-4 text-white/70 text-sm">Chasing payments across multiple <br /> platforms and spreadsheets</p>
             </div>
 
             {/* Card 3 */}
@@ -151,7 +151,7 @@ export default function HomePage() {
               </div>
               <h4 className="text-xl font-semibold">Manual follow-ups
                 <br />draining billable hours</h4>
-              <p className="mt-4 text-white/70 text-sm">Time wasted on admin tasks instead of actual work</p>
+              <p className="mt-4 text-white/70 text-sm">Time wasted on admin tasks <br />instead of actual work</p>
             </div>
           </div>
         </div>
@@ -244,7 +244,7 @@ export default function HomePage() {
       {/* Built by a team that has walked the talk */}
       <section className="bg-white text-black px-6 sm:px-10 py-20 overflow-hidden">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-4xl sm:text-5xl font-bold mb-16 scroll-fade-in-up">
+          <h2 className="text-center text-4xl sm:text-5xl font-bold mb-16 scroll-fade-in-up font-poppins" style={{ fontWeight: '700' }}>
             Built by a team that has walked the talk
           </h2>
 
@@ -253,22 +253,22 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2">
               {/* Left: Pieced-together toolchain */}
               <div className="bg-white p-12 group">
-                <h3 className="text-2xl font-bold mb-8 animate-fade-in-up stagger-3">Pieced-together toolchain</h3>
+                <h3 className="text-2xl font-bold mb-8 animate-fade-in-up stagger-3 font-poppins" style={{ fontWeight: '700' }}>Pieced-together toolchain</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between bg-gray-100 rounded-lg px-4 py-3 hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer animate-fade-in-up stagger-4 group/item">
-                    <span className="text-gray-700">Email + Google Drive</span>
+                    <span className="text-gray-700 font-poppins" style={{ fontWeight: '500' }}>Email + Google Drive</span>
                     <span className="text-red-500 text-xl group-hover/item:scale-125 transition-transform duration-300">✕</span>
                   </div>
                   <div className="flex items-center justify-between bg-gray-100 rounded-lg px-4 py-3 hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer animate-fade-in-up stagger-5 group/item">
-                    <span className="text-gray-700">Separate invoicing tool</span>
+                    <span className="text-gray-700 font-poppins" style={{ fontWeight: '500' }}>Separate invoicing tool</span>
                     <span className="text-red-500 text-xl group-hover/item:scale-125 transition-transform duration-300">✕</span>
                   </div>
                   <div className="flex items-center justify-between bg-gray-100 rounded-lg px-4 py-3 hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer animate-fade-in-up stagger-6 group/item">
-                    <span className="text-gray-700">Manual payment tracking</span>
+                    <span className="text-gray-700 font-poppins" style={{ fontWeight: '500' }}>Manual payment tracking</span>
                     <span className="text-red-500 text-xl group-hover/item:scale-125 transition-transform duration-300">✕</span>
                   </div>
                   <div className="flex items-center justify-between bg-gray-100 rounded-lg px-4 py-3 hover:bg-gray-200 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer animate-fade-in-up stagger-7 group/item">
-                    <span className="text-gray-700">Scattered communication</span>
+                    <span className="text-gray-700 font-poppins" style={{ fontWeight: '500' }}>Scattered communication</span>
                     <span className="text-red-500 text-xl group-hover/item:scale-125 transition-transform duration-300">✕</span>
                   </div>
                 </div>
@@ -276,23 +276,23 @@ export default function HomePage() {
 
               {/* Right: BridgeWork Platform */}
               <div className="bg-black text-white p-12 group">
-                <h3 className="text-2xl font-bold mb-8 animate-fade-in-up stagger-3">BridgeWork Platform</h3>
+                <h3 className="text-2xl font-bold mb-8 animate-fade-in-up stagger-3 font-poppins" style={{ fontWeight: '700' }}>BridgeWork Platform</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between bg-gray-200 rounded-lg px-4 py-3 hover:bg-gray-300 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer animate-fade-in-up stagger-4 group/item">
-                    <span className="text-gray-800">Unified file management</span>
-                    <span className="text-green-500 text-xl group-hover/item:scale-125 transition-transform duration-300">✓</span>
+                    <span className="text-gray-800 font-poppins" style={{ fontWeight: '500' }}>Unified file management</span>
+                    <Image src="/check_circle.svg" alt="check" width={24} height={24} />
                   </div>
                   <div className="flex items-center justify-between bg-gray-200 rounded-lg px-4 py-3 hover:bg-gray-300 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer animate-fade-in-up stagger-5 group/item">
-                    <span className="text-gray-800">Integrated billing system</span>
-                    <span className="text-green-500 text-xl group-hover/item:scale-125 transition-transform duration-300">✓</span>
+                    <span className="text-gray-800 font-poppins" style={{ fontWeight: '500' }}>Integrated billing system</span>
+                    <Image src="/check_circle.svg" alt="check" width={24} height={24} />
                   </div>
                   <div className="flex items-center justify-between bg-gray-200 rounded-lg px-4 py-3 hover:bg-gray-300 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer animate-fade-in-up stagger-6 group/item">
-                    <span className="text-gray-800">Automated payment flows</span>
-                    <span className="text-green-500 text-xl group-hover/item:scale-125 transition-transform duration-300">✓</span>
+                    <span className="text-gray-800 font-poppins" style={{ fontWeight: '500' }}>Automated payment flows</span>
+                    <Image src="/check_circle.svg" alt="check" width={24} height={24} />
                   </div>
                   <div className="flex items-center justify-between bg-gray-200 rounded-lg px-4 py-3 hover:bg-gray-300 hover:scale-105 hover:shadow-lg transition-all duration-300 cursor-pointer animate-fade-in-up stagger-7 group/item">
-                    <span className="text-gray-800">Centralized messaging</span>
-                    <span className="text-green-500 text-xl group-hover/item:scale-125 transition-transform duration-300">✓</span>
+                    <span className="text-gray-800 font-poppins" style={{ fontWeight: '500' }}  >Centralized messaging</span>
+                    <Image src="/check_circle.svg" alt="check" width={24} height={24} />
                   </div>
                 </div>
               </div>
@@ -304,8 +304,8 @@ export default function HomePage() {
       {/* Be first in line—get 3 months free & shape the roadmap */}
       <section className="bg-black text-white px-6 sm:px-10 py-20">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-12 scroll-fade-in-up font-poppins">
-            Early bird gets the worm; join the waitlist now and get exclusive early access.
+          <h2 className="text-4xl sm:text-5xl font-bold mb-12 scroll-fade-in-up font-poppins" style={{ fontWeight: '700' }}>
+            Early bird gets the worm; Join the waitlist now and get exclusive early access.
           </h2>
 
           {/* Waitlist form */}
@@ -316,18 +316,18 @@ export default function HomePage() {
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="w-full px-4 py-3 font-poppins text-black rounded-lg bg-gray-100 border-0 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 hover:bg-gray-200 animate-fade-in-up stagger-3"
+                  className="w-full px-4 py-3 font-poppins text-black rounded-lg bg-gray-100 border-1 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 hover:bg-gray-200 animate-fade-in-up stagger-3"
                 />
                 <input
                   type="email"
                   placeholder="Work Email"
-                  className="w-full px-4 py-3 font-poppins text-black rounded-lg bg-gray-100 border-0 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 hover:bg-gray-200 animate-fade-in-up stagger-4"
+                  className="w-full px-4 py-3 font-poppins text-black rounded-lg bg-gray-100 border-1 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 hover:bg-gray-200 animate-fade-in-up stagger-4"
                 />
               </div>
 
               {/* Looking for selection */}
-              <div className="flex items-center justify-center gap-8 animate-fade-in-up stagger-5">
-                <span className="text-gray-700 font-medium font-poppins">Looking for :</span>
+              <div className="flex  gap-8 animate-fade-in-up stagger-5 py-8">
+                <span className="text-gray-700 font-medium font-poppins ml-4">Looking for :</span>
                 <div className="flex items-center gap-6">
                   <label className="flex items-center gap-2 cursor-pointer">
                     <input
@@ -360,16 +360,16 @@ export default function HomePage() {
               </button>
 
               {/* Social proof */}
-              <p className="text-gray-500 text-sm mt-4 animate-fade-in-up stagger-7 font-poppins">
+              <p className="text-gray-500 text-sm mt-4 animate-fade-in-up stagger-7 font-poppins" style={{ fontWeight: '700' }}>
                 2,147 professionals already joined
               </p>
             </form>
           </div>
         </div>
       </section>
-
       {/* Footer */}
-      <footer className="bg-[#1C1B1F] text-white px-6 sm:px-10 py-0" style={{ backgroundImage: 'url(/gradient.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      <div className="relative h-20 bg-gradient-to-b from-black via-black/80 via-black/80 via-black/80 via-black/80 to-transparent z-10" />
+      <footer className="bg-[#1C1B1F] text-white px-6 sm:px-10 py-0 relative z-0" style={{ backgroundImage: 'url(/gradient.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
             {/* Left: Brand wordmark */}
