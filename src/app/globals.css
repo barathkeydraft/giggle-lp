@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Import fonts - reliable sources */
+@import url('https://fonts.cdnfonts.com/css/neue-montreal');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,6 +28,27 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Neue Montreal font class with fallbacks */
+.font-neue-montreal {
+  font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Alternative modern font class */
+.font-modern {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Poppins font class */
+.font-poppins {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 html { scroll-behavior: smooth; }
