@@ -13,7 +13,7 @@ export default function Home() {
           priority
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/30" />
+        {/* <div className="absolute inset-0 bg-black/30" /> */}
       </div>
 
       {/* Content layer */}
@@ -24,54 +24,37 @@ export default function Home() {
         </div>
 
         {/* Center copy with sequential typewriter effect aligned similar to reference */}
-        <div className="px-6 w-full max-w-6xl text-center" style={{ lineHeight: "50px" }}>
-          <p className="type-line text-xl sm:text-2xl md:text-3xl font-light text-white/90" style={{
-            // steps, duration, delay for the typewriter effect
-            ["--tw-steps" as unknown as string]: 86 as unknown as string,
-            ["--tw-duration" as unknown as string]: "3.2s",
-            ["--tw-delay" as unknown as string]: "0s",
-          } as React.CSSProperties}>
+        <div className="px-6 w-full max-w-6xl text-center mt-4" style={{ lineHeight: "50px" }}>
+          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90">
             Every part of the lifestyle we live started with just a handful of people;
           </p>
-          <p className="type-line text-xl sm:text-2xl md:text-3xl font-light text-white/90" style={{
-            ["--tw-steps" as unknown as string]: 58 as unknown as string, ["--tw-duration" as unknown as string]: "2.4s", ["--tw-delay" as unknown as string]: "3.35s",
-          } as React.CSSProperties}>
+          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
             crazy enough to dream it, bold enough to try.
           </p>
-          <p className="type-line text-xl sm:text-2xl md:text-3xl font-light text-white/90" style={{
-            ["--tw-steps" as unknown as string]: 100 as unknown as string, ["--tw-duration" as unknown as string]: "3.8s", ["--tw-delay" as unknown as string]: "6s",
-          } as React.CSSProperties}>
+          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
             What started as a vision became the way the world works, connects, and thrives.
           </p>
 
-          <div className="h-6" />
+          <div className="h-6 mt-8" />
 
-          <p className="type-line text-2xl md:text-4xl font-light" style={{
-            ["--tw-steps" as unknown as string]: 18 as unknown as string, ["--tw-duration" as unknown as string]: "1.5s", ["--tw-delay" as unknown as string]: "10s",
-          } as React.CSSProperties}>
+          <p className="text-2xl md:text-3xl font-light mt-8">
             Now it&#39;s our turn.
           </p>
-          <p className="type-line text-2xl md:text-3xl font-light" style={{
-            ["--tw-steps" as unknown as string]: 22 as unknown as string, ["--tw-duration" as unknown as string]: "1.7s", ["--tw-delay" as unknown as string]: "11.7s",
-          } as React.CSSProperties}>
+          <p className="text-2xl md:text-3xl font-light mt-4">
             And we want you in it.
           </p>
-          <p className="type-line text-2xl md:text-3xl font-light" style={{
-            ["--tw-steps" as unknown as string]: 41 as unknown as string, ["--tw-duration" as unknown as string]: "2s", ["--tw-delay" as unknown as string]: "13.5s",
-          } as React.CSSProperties}>
+         
+
+          <div className="h-6" />
+
+          <p className="text-2xl md:text-3xl font-light mt-4">
             Not as a customer,  as a fellow visionary.
           </p>
 
-          <div className="h-6" />
-
-          <p className="type-line text-xl sm:text-2xl md:text-3xl font-light text-white/90" style={{
-            ["--tw-steps" as unknown as string]: 52 as unknown as string, ["--tw-duration" as unknown as string]: "2.4s", ["--tw-delay" as unknown as string]: "16s",
-          } as React.CSSProperties}>
+          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
             Together, we&#39;re not just changing the way we live.
           </p>
-          <p className="type-line text-xl sm:text-2xl md:text-3xl font-light text-white/90" style={{
-            ["--tw-steps" as unknown as string]: 54 as unknown as string, ["--tw-duration" as unknown as string]: "2.6s", ["--tw-delay" as unknown as string]: "18.5s",
-          } as React.CSSProperties}>
+          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
             We&#39;re creating something so big, it becomes culture.
           </p>
         </div>

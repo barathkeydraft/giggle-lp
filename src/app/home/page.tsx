@@ -23,8 +23,8 @@ export default function HomePage() {
               <Image src="/NameLogo.png" alt="giggle" width={110} height={32} className="entrance-scale-in entrance-stagger-1" />
             </div>
             <nav className="flex items-center gap-6 text-white/90">
-              <a href="#about" className="rounded-full px-3 py-1.5 hover:bg-white/15 hover:text-white transition entrance-scale-in entrance-stagger-2">About</a>
-              <a href="#contact" className="rounded-full px-3 py-1.5 hover:bg-white/15 hover:text-white transition entrance-scale-in entrance-stagger-3">Contact Us</a>
+              <a href="#about" className="rounded-full px-3 py-1.5 hover:bg-white/15 hover:text-white transition entrance-scale-in entrance-stagger-2 text-black font-poppins">About</a>
+              <a href="#contact" className="rounded-full px-3 py-1.5 hover:bg-white/15 hover:text-white transition entrance-scale-in entrance-stagger-3 text-black font-poppins">Contact Us</a>
             </nav>
           </div>
         </div>
