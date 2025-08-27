@@ -1,0 +1,26 @@
+{
+  "name": "giggle - Unified workspace for modern teams",
+  "short_name": "giggle",
+  "description": "Get more done with less friction. Unified workspace for modern teams.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1C1B1F",
+  "theme_color": "#1C1B1F",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/TopLogo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/TopLogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "business", "utilities"],
+  "lang": "en-US"
+}
