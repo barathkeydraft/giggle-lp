@@ -27,7 +27,7 @@ export default function HomePage() {
             {/* Left copy */}
             <div className="entrance-fade-in-left entrance-stagger-2">
               <h2 className="text-4xl sm:text-5xl font-semibold leading-tight text-white/95">
-                Work doesn't wait, neither should <span className="text-white">you</span>.
+                Work doesn&#39;t wait, neither should <span className="text-white">you</span>.
               </h2>
               <p className="mt-6 text-2xl text-white/90">
                 Welcome to <span className="font-semibold">giggle</span>, a unified place to
