@@ -55,10 +55,10 @@ export default function Home() {
           </p>
          
 
-          <div className="h-6" />
+          <div className="h-6 mt-4" />
 
 
-          <p className="text-white/90 mt-4">
+          <p className="text-white/90 mt-2">
             Together, we&#39;re not just changing the way we live.
           </p>
           <p className="text-white/90 mt-4">
