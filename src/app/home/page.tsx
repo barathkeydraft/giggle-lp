@@ -6,25 +6,65 @@ import { useState } from "react";
 
 export default function HomePage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     lookingFor: 'to-hire'
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    
+    setIsSubmitting(true);
+    
+    try {
+      // Log the data being sent for debugging
+      const dataToSend = {
+        name: formData.name,
+        email: formData.email,
+        'looking-to': formData.lookingFor, // Match the exact column name in SheetDB
+        timestamp: new Date().toISOString()
+      };
+      
+      console.log('Sending data to SheetDB:', dataToSend);
+      
+      // Send data to SheetDB
+      const response = await fetch('https://sheetdb.io/api/v1/987jfzeru0p5b', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(dataToSend)
+      });
+
+      if (response.ok) {
+        console.log('Data sent to SheetDB successfully');
+        setIsSubmitted(true);
+      } else {
+        console.error('Failed to send data to SheetDB');
+        alert('There was an error submitting your information. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your information. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'radio' ? value : value
-    }));
+    console.log('Input changed:', { name, value, type, currentFormData: formData });
+    
+    setFormData(prev => {
+      const newData = {
+        ...prev,
+        [name]: value
+      };
+      console.log('Updated form data:', newData);
+      return newData;
+    });
   };
 
   return (
@@ -362,34 +402,50 @@ export default function HomePage() {
                     <label className="flex items-center gap-2 cursor-pointer">
                       <input
                         type="radio"
-                        name="looking-for"
+                        name="lookingFor"
                         value="to-work"
                         checked={formData.lookingFor === 'to-work'}
                         onChange={handleInputChange}
-                        className="w-4 h-4 text-blue-600 focus:ring-blue-500"
+                        className="w-4 h-4 text-blue-600 focus:ring-blue-500 cursor-pointer"
                       />
                       <span className="text-gray-700 font-poppins">to work</span>
                     </label>
                     <label className="flex items-center gap-2 cursor-pointer">
                       <input
                         type="radio"
-                        name="looking-for"
+                        name="lookingFor"
                         value="to-hire"
                         checked={formData.lookingFor === 'to-hire'}
                         onChange={handleInputChange}
-                        className="w-4 h-4 text-blue-600 focus:ring-blue-500"
+                        className="w-4 h-4 text-blue-600 focus:ring-blue-500 cursor-pointer"
                       />
                       <span className="text-gray-700 font-poppins">to hire</span>
                     </label>
                   </div>
                 </div>
+                
+
+
+
 
                 {/* Join waitlist button */}
                 <button
                   type="submit"
-                  className="w-full bg-black text-white py-4 px-8 rounded-2xl font-bold text-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl font-poppins"
+                  disabled={isSubmitting}
+                  className={`w-full py-4 px-8 rounded-2xl font-bold text-lg transition-all duration-300 font-poppins ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-black text-white hover:bg-gray-800 hover:scale-105 hover:shadow-xl'
+                  }`}
                 >
-                  Join wait-list
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Submitting...
+                    </div>
+                  ) : (
+                    'Join wait-list'
+                  )}
                 </button>
               </form>
             ) : (
