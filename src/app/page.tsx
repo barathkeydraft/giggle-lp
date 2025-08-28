@@ -42,7 +42,7 @@ export default function Home() {
             What started as a vision became the way the world works, connects, and thrives.
           </p>
 
-          <div className="h-6 mt-8" />
+          <div className="h-6 mt-2" />
 
           <p className="mt-8">
             Now it&#39;s our turn.
