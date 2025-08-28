@@ -33,17 +33,17 @@ export default function HomePage() {
         <div className="relative z-10 mt-20 px-6 sm:px-10 pb-12">
           <div className="mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
             {/* Left copy */}
-            <div className="entrance-fade-in-left entrance-stagger-2">
+            <div className="entrance-fade-in-left entrance-stagger-2 text-center md:text-left">
               <h2 className="text-xl sm:text-3xl font-light leading-tight text-white/95 font-poppins">
                 Work doesn&#39;t wait, neither should <span className="text-white">you</span>.
               </h2>
               <h2 className="mt-6 text-xl sm:text-3xl font-light leading-tight text-white/95 font-poppins">
                 Welcome to <span className="font-semibold">giggle</span>, a unified place to
               </h2>
-              <p className="mt-4 text-lg sm:text-3xl font-black tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] font-poppins" style={{ marginLeft: '16rem', fontWeight: '700' }}>
+              <p className="mt-4 text-lg sm:text-3xl font-black tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] font-poppins md:ml-16 md:ml-0" style={{ fontWeight: '700' }}>
                 GET SH*T DONE
               </p>
-              <p className="mt-8 text-lg text-white max-w-xl font-poppins italic " style={{ fontWeight: '500', color: '#484848' }}>
+              <p className="mt-8 text-lg text-white max-w-xl font-poppins italic mx-auto md:mx-0" style={{ fontWeight: '500', color: '#484848' }}>
                 Find prospects, organize work, create teams; <br />all in a single place.
               </p>
               <div className="text-center">
