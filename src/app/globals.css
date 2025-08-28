@@ -525,3 +525,10 @@ html { scroll-behavior: smooth; }
 .animate-float-fast {
   animation: float-fast 4s ease-in-out infinite;
 }
+
+/* Desktop-only left margin for hero text */
+@media (min-width: 768px) {
+  .desktop-margin-left {
+    margin-left: 16rem;
+  }
+}

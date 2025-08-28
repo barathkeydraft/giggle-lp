@@ -40,7 +40,7 @@ export default function HomePage() {
               <h2 className="mt-6 text-xl sm:text-3xl font-light leading-tight text-white/95 font-poppins">
                 Welcome to <span className="font-semibold">giggle</span>, a unified place to
               </h2>
-              <p className="mt-4 text-lg sm:text-3xl font-black tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] font-poppins md:ml-16 md:ml-0" style={{ fontWeight: '700' }}>
+              <p className="mt-4 text-lg sm:text-3xl font-black tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] font-poppins desktop-margin-left" style={{ fontWeight: '700' }}>
                 GET SH*T DONE
               </p>
               <p className="mt-8 text-lg text-white max-w-xl font-poppins italic mx-auto md:mx-0" style={{ fontWeight: '500', color: '#484848' }}>
