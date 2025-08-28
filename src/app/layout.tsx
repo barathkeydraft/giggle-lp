@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "giggle - Unified workspace for modern teams",
   description: "Get more done with less friction. Unified workspace for modern teams to find prospects, organize work, create teams, and get sh*t done.",
   keywords: ["workspace", "productivity", "team collaboration", "project management", "contract management"],
-  authors: [{ name: "giggle team" }},
+  authors: [{ name: "giggle team" }],
   creator: "giggle",
   publisher: "giggle",
   formatDetection: {
