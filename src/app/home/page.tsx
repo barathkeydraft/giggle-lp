@@ -477,7 +477,7 @@ export default function HomePage() {
                   Welcome to the waitlist! 🎉
                 </h3>
                 <p className="text-gray-600 text-lg font-poppins mb-6">
-                  Thank you for joining us. We'll notify you as soon as giggle is ready for you.
+                  Thank you for joining us. We&apos;ll notify you as soon as giggle is ready for you.
                 </p>
                 
                 {/* Reset button */}
