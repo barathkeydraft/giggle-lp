@@ -27,7 +27,7 @@ export default function Home() {
         <div className="px-2 w-full max-w-6xl text-center mt-4" style={{ 
           fontFamily: 'Neue Montreal, sans-serif',
           fontWeight: 400,
-          fontSize: '34px',
+          fontSize: '30px',
           lineHeight: '35px',
           letterSpacing: '0%',
           wordSpacing: '-2px',
