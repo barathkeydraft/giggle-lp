@@ -24,12 +24,13 @@ export default function Home() {
         </div>
 
         {/* Center copy with updated typography styles */}
-        <div className="px-6 w-full max-w-6xl text-center mt-4" style={{ 
+        <div className="px-2 w-full max-w-6xl text-center mt-4" style={{ 
           fontFamily: 'Neue Montreal, sans-serif',
           fontWeight: 400,
           fontSize: '34px',
-          lineHeight: '50px',
-          letterSpacing: '0%'
+          lineHeight: '35px',
+          letterSpacing: '0%',
+          wordSpacing: '-2px',
         }}>
           <p className="text-white/90">
             Every part of the lifestyle we live started with just a handful of people;
@@ -73,6 +74,9 @@ export default function Home() {
             I&#39;m in!
           </a>
         </div>
+        
+        {/* Gradient transition at bottom of page */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1C1B1F] via-[#1C1B1F]/40 via-[#1C1B1F]/20 to-transparent h-48" />
       </div>
       {/* End of landing hero */}
 
