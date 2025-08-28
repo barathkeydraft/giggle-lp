@@ -1,10 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden text-white">
       {/* Background image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <Image
           src="/unsplash_tZCrFpSNiIQ (1).png"
           alt="Background"
@@ -17,7 +18,7 @@ export default function Home() {
       </div>
 
       {/* Content layer */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-between py-8">
+      <div className="relative z-30 flex min-h-screen flex-col items-center justify-between py-8">
         {/* Top logo */}
         <div className="pt-6">
           <Image src="/TopLogo.png" alt="Top logo" width={72} height={72} priority />
@@ -67,16 +68,20 @@ export default function Home() {
         </div>
 
         {/* Bottom wordmark */}
-        <div className="pb-8 flex flex-col items-center gap-4">
+        <div className="pb-8 flex flex-col items-center gap-4 relative z-40">
           <Image src="/NameLogo.png" alt="Name logo" width={160} height={48} priority />
           {/* CTA */}
-          <a href="/home" className="scroll-indicator inline-flex items-center gap-3 text-white font-medium select-none rounded-full px-6 py-3 bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition">
+          <Link 
+            href="/home" 
+            className="inline-flex items-center gap-3 text-white font-medium select-none rounded-full px-6 py-3 bg-white/10 backdrop-blur-md border border-white/15 hover:bg-white/20 transition cursor-pointer relative z-50"
+            style={{ pointerEvents: 'auto' }}
+          >
             I&#39;m in!
-          </a>
+          </Link>
         </div>
         
         {/* Gradient transition at bottom of page */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1C1B1F] via-[#1C1B1F]/40 via-[#1C1B1F]/20 to-transparent h-48" />
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1C1B1F] via-[#1C1B1F]/40 via-[#1C1B1F]/20 to-transparent h-48 z-10" />
       </div>
       {/* End of landing hero */}
 

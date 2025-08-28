@@ -1,7 +1,16 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
 
 export default function HomePage() {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    // For now, we'll just prevent the default form submission
+    console.log('Form submitted - would send data to backend');
+  };
+
   return (
     <main className="min-h-screen text-white">
       {/* Header with background image */}
@@ -308,7 +317,7 @@ export default function HomePage() {
 
           {/* Waitlist form */}
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl scroll-fade-in-up">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Name and Email inputs */}
               <div className="grid md:grid-cols-2 gap-4">
                 <input
