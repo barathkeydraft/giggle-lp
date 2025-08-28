@@ -23,27 +23,33 @@ export default function Home() {
           <Image src="/TopLogo.png" alt="Top logo" width={72} height={72} priority />
         </div>
 
-        {/* Center copy with sequential typewriter effect aligned similar to reference */}
-        <div className="px-6 w-full max-w-6xl text-center mt-4" style={{ lineHeight: "50px" }}>
-          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90">
+        {/* Center copy with updated typography styles */}
+        <div className="px-6 w-full max-w-6xl text-center mt-4" style={{ 
+          fontFamily: 'Neue Montreal, sans-serif',
+          fontWeight: 400,
+          fontSize: '34px',
+          lineHeight: '50px',
+          letterSpacing: '0%'
+        }}>
+          <p className="text-white/90">
             Every part of the lifestyle we live started with just a handful of people;
           </p>
-          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
+          <p className="text-white/90 mt-4">
             crazy enough to dream it, bold enough to try.
           </p>
-          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
+          <p className="text-white/90 mt-4">
             What started as a vision became the way the world works, connects, and thrives.
           </p>
 
           <div className="h-6 mt-8" />
 
-          <p className="text-2xl md:text-3xl font-light mt-8">
+          <p className="mt-8">
             Now it&#39;s our turn.
           </p>
-          <p className="text-2xl md:text-3xl font-light mt-4">
+          <p className="mt-4">
             And we want you in it.
           </p>
-          <p className="text-2xl md:text-3xl font-light mt-4">
+          <p className="mt-4">
             Not as a customer,  as a fellow visionary.
           </p>
          
@@ -51,10 +57,10 @@ export default function Home() {
           <div className="h-6" />
 
 
-          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
+          <p className="text-white/90 mt-4">
             Together, we&#39;re not just changing the way we live.
           </p>
-          <p className="text-xl sm:text-2xl md:text-3xl font-light text-white/90 mt-4">
+          <p className="text-white/90 mt-4">
             We&#39;re creating something so big, it becomes <span className="italic">culture</span>.
           </p>
         </div>

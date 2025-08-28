@@ -92,11 +92,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Additional spacing before fade transition */}
-        <div className="h-24" />
-
-        {/* Fade transition overlay */}
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-[#1C1B1F] to-transparent" />
+        {/* Subtle fade transition that blends naturally with background */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#1C1B1F] via-[#1C1B1F]/40 via-[#1C1B1F]/20 to-transparent h-48" />
       </div>
 
       {/* Pilot, Progress and Handover : Simplified */}
@@ -176,7 +173,7 @@ export default function HomePage() {
         <div className="relative z-10">
           <div className="mx-auto max-w-6xl text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-16 scroll-fade-in-up font-poppins" style={{ fontWeight: '700' }}>
-              One workspace—zero friction
+              One workspace, zero friction
             </h2>
 
             <div className="grid gap-8 md:grid-cols-3">
@@ -190,10 +187,10 @@ export default function HomePage() {
                     height={200}
                   />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 font-poppins">
+                <h3 className="text-2xl font-semibold text-black mb-4 font-poppins">
                   Contract-to-Cash in a click
                 </h3>
-                <p className="text-white/80 text-lg font-poppins" style={{ fontWeight: '500' }}>
+                <p className="text-black text-lg font-poppins" style={{ fontWeight: '500' }}>
                   Auto-generated agreements + Stripe billing integration for seamless payments
                 </p>
               </div>
@@ -208,10 +205,10 @@ export default function HomePage() {
                     height={200}
                   />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 font-poppins">
+                <h3 className="text-2xl font-semibold text-black mb-4 font-poppins">
                   Live project timeline
                 </h3>
-                <p className="text-white/80 text-lg font-poppins">
+                <p className="text-black text-lg font-poppins">
                   Tasks, revisions, approvals in Kanban view with real-time updates
                 </p>
               </div>
@@ -226,10 +223,10 @@ export default function HomePage() {
                     height={200}
                   />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 font-poppins">
+                <h3 className="text-2xl font-semibold text-black mb-4 font-poppins">
                   Smart nudges
                 </h3>
-                <p className="text-white/80 text-lg font-poppins">
+                <p className="text-black text-lg font-poppins">
                   Remind clients to review & pay on time with automated follow-ups
                 </p>
               </div>
@@ -368,9 +365,10 @@ export default function HomePage() {
         </div>
       </section>
       {/* Footer */}
-      <div className="relative h-20 bg-gradient-to-b from-black via-black/80 via-black/80 via-black/80 via-black/80 to-transparent z-10" />
-      <footer className="bg-[#1C1B1F] text-white px-6 sm:px-10 py-0 relative z-0" style={{ backgroundImage: 'url(/gradient.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="mx-auto max-w-6xl">
+            <footer className="bg-[#1C1B1F] text-white py-0 relative z-0" style={{ backgroundImage: 'url(/gradient.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        {/* Footer gradient overlay - full width */}
+        <div className="relative h-30 bg-gradient-to-b from-black via-black/80 via-black/80 via-black/80 via-black/80 to-transparent" />
+        <div className="mx-auto max-w-6xl px-6 sm:px-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
             {/* Left: Brand wordmark */}
             <div >
