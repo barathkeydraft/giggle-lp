@@ -17,7 +17,7 @@ export default function Home() {
       </div>
 
       {/* Content layer */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-between py-10">
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-between py-8">
         {/* Top logo */}
         <div className="pt-6">
           <Image src="/TopLogo.png" alt="Top logo" width={72} height={72} priority />

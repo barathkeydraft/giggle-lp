@@ -529,6 +529,6 @@ html { scroll-behavior: smooth; }
 /* Desktop-only left margin for hero text */
 @media (min-width: 768px) {
   .desktop-margin-left {
-    margin-left: 16rem;
+    margin-left: 17rem;
   }
 }

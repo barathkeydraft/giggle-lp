@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -23,7 +24,7 @@ export default function HomePage() {
               <Image src="/NameLogo.png" alt="giggle" width={110} height={32} className="entrance-scale-in entrance-stagger-1" />
             </div>
             <nav className="flex items-center gap-6 text-white/90">
-              <a href="#about" className="rounded-full px-3 py-1.5 hover:bg-white/15 hover:text-white transition entrance-scale-in entrance-stagger-2 text-black font-poppins">About</a>
+              <Link href="/" className="rounded-full px-3 py-1.5 hover:bg-white/15 hover:text-white transition entrance-scale-in entrance-stagger-2 text-black font-poppins">About</Link>
               <a href="#contact" className="rounded-full px-3 py-1.5 hover:bg-white/15 hover:text-white transition entrance-scale-in entrance-stagger-3 text-black font-poppins">Contact Us</a>
             </nav>
           </div>
@@ -38,7 +39,7 @@ export default function HomePage() {
                 Work doesn&#39;t wait, neither should <span className="text-white">you</span>.
               </h2>
               <h2 className="mt-6 text-xl sm:text-3xl font-light leading-tight text-white/95 font-poppins">
-                Welcome to <span className="font-semibold">giggle</span>, a unified place to
+                Welcome to <span className="font-bold">giggle</span>, a unified place to
               </h2>
               <p className="mt-4 text-lg sm:text-3xl font-black tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.25)] font-poppins desktop-margin-left" style={{ fontWeight: '700' }}>
                 GET SH*T DONE
@@ -239,7 +240,7 @@ export default function HomePage() {
       </section>
 
       {/* Built by a team that has walked the talk */}
-      <section className="bg-white text-black px-6 sm:px-10 py-20 overflow-hidden">
+      <section id="about" className="bg-white text-black px-6 sm:px-10 py-20 overflow-hidden">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-center text-4xl sm:text-5xl font-bold mb-16 scroll-fade-in-up font-poppins" style={{ fontWeight: '700' }}>
             Built by a team that has walked the talk
@@ -365,9 +366,9 @@ export default function HomePage() {
         </div>
       </section>
       {/* Footer */}
-            <footer className="bg-[#1C1B1F] text-white py-0 relative z-0" style={{ backgroundImage: 'url(/gradient.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <footer id="contact" className="bg-[#1C1B1F] text-white py-0 relative z-0" style={{ backgroundImage: 'url(/gradient.png)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         {/* Footer gradient overlay - full width */}
-        <div className="relative h-30 bg-gradient-to-b from-black via-black/80 via-black/80 via-black/80 via-black/80 to-transparent" />
+        {/* <div className="relative h-30 bg-gradient-to-b from-black via-black/80 via-black/80 via-black/80 via-black/80 to-transparent" /> */}
         <div className="mx-auto max-w-6xl px-6 sm:px-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
             {/* Left: Brand wordmark */}
