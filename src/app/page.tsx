@@ -39,7 +39,7 @@ export default function Home() {
           <p className="text-white/90 mb-3 sm:mb-4">
             crazy enough to dream it, bold enough to try.
           </p>
-          <p className="text-white/90 mb-3 sm:mb-4">
+          <p className="text-white/90 mb-3 sm:mb-4 whitespace-nowrap">
             What started as a vision became the way the world works, connects, and thrives.
           </p>
 
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
 
         {/* Bottom wordmark */}
-        <div className="pb-6 sm:pb-8 flex flex-col items-center gap-4 relative z-40">
+        <div className="pb-6 sm:pb-8 flex flex-col items-center relative z-40">
           <Image src="/NameLogo.png" alt="Name logo" width={160} height={48} priority />
           {/* CTA */}
           <Link 

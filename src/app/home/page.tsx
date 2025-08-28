@@ -2,13 +2,29 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function HomePage() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    lookingFor: 'to-hire'
+  });
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // For now, we'll just prevent the default form submission
-    console.log('Form submitted - would send data to backend');
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'radio' ? value : value
+    }));
   };
 
   return (
@@ -315,59 +331,114 @@ export default function HomePage() {
             Early bird gets the worm; Join the waitlist now and get exclusive early access.
           </h2>
 
-          {/* Waitlist form */}
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl scroll-fade-in-up">
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              {/* Name and Email inputs */}
-              <div className="grid md:grid-cols-2 gap-4">
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full px-4 py-3 font-poppins text-black rounded-lg bg-gray-100 border-1 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 hover:bg-gray-200 animate-fade-in-up stagger-3"
-                />
-                <input
-                  type="email"
-                  placeholder="Work Email"
-                  className="w-full px-4 py-3 font-poppins text-black rounded-lg bg-gray-100 border-1 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 hover:bg-gray-200 animate-fade-in-up stagger-4"
-                />
-              </div>
-
-              {/* Looking for selection */}
-              <div className="flex  gap-8 animate-fade-in-up stagger-5 py-8">
-                <span className="text-gray-700 font-medium font-poppins ml-4">Looking for :</span>
-                <div className="flex items-center gap-6">
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="looking-for"
-                      value="to-work"
-                      className="w-4 h-4 text-blue-600 focus:ring-blue-500"
-                    />
-                    <span className="text-gray-700 font-poppins">to work</span>
-                  </label>
-                  <label className="flex items-center gap-2 cursor-pointer">
-                    <input
-                      type="radio"
-                      name="looking-for"
-                      value="to-hire"
-                      defaultChecked
-                      className="w-4 h-4 text-blue-600 focus:ring-blue-500"
-                    />
-                    <span className="text-gray-700 font-poppins">to hire</span>
-                  </label>
+          {/* Waitlist form or success message */}
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
+            {!isSubmitted ? (
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                {/* Name and Email inputs */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="Your name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 font-poppins text-black rounded-lg bg-gray-100 border-1 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 hover:bg-gray-200"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Work Email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 font-poppins text-black rounded-lg bg-gray-100 border-1 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-300 hover:bg-gray-200"
+                  />
                 </div>
+
+                {/* Looking for selection */}
+                <div className="flex gap-8 py-8">
+                  <span className="text-gray-700 font-medium font-poppins ml-4">Looking for :</span>
+                  <div className="flex items-center gap-6">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="looking-for"
+                        value="to-work"
+                        checked={formData.lookingFor === 'to-work'}
+                        onChange={handleInputChange}
+                        className="w-4 h-4 text-blue-600 focus:ring-blue-500"
+                      />
+                      <span className="text-gray-700 font-poppins">to work</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="looking-for"
+                        value="to-hire"
+                        checked={formData.lookingFor === 'to-hire'}
+                        onChange={handleInputChange}
+                        className="w-4 h-4 text-blue-600 focus:ring-blue-500"
+                      />
+                      <span className="text-gray-700 font-poppins">to hire</span>
+                    </label>
+                  </div>
+                </div>
+
+                {/* Join waitlist button */}
+                <button
+                  type="submit"
+                  className="w-full bg-black text-white py-4 px-8 rounded-2xl font-bold text-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl font-poppins"
+                >
+                  Join wait-list
+                </button>
+              </form>
+            ) : (
+              <div className="text-center py-8">
+                {/* Animated tick icon */}
+                <div className="mb-6 flex justify-center">
+                  <div className="relative">
+                    <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center animate-pulse">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="48"
+                        height="48"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="#10B981"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="animate-bounce"
+                      >
+                        <path d="M20 6 9 17l-5-5" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Success message */}
+                <h3 className="text-2xl font-bold text-gray-800 mb-4 font-poppins">
+                  Welcome to the waitlist! 🎉
+                </h3>
+                <p className="text-gray-600 text-lg font-poppins mb-6">
+                  Thank you for joining us. We'll notify you as soon as giggle is ready for you.
+                </p>
+                
+                {/* Reset button */}
+                <button
+                  onClick={() => setIsSubmitted(false)}
+                  className="inline-flex items-center gap-2 bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-300 font-poppins"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                    <path d="M21 3v5h-5"/>
+                    <path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/>
+                    <path d="M3 21v-5h5"/>
+                  </svg>
+                  Join another person
+                </button>
               </div>
-
-              {/* Join waitlist button */}
-              <button
-                type="submit"
-                className="w-full bg-black text-white py-4 px-8 rounded-2xl font-bold text-lg hover:bg-gray-800 transition-all duration-300 hover:scale-105 hover:shadow-xl animate-fade-in-up stagger-6 font-poppins"
-              >
-                Join wait-list
-              </button>
-
-
-            </form>
+            )}
           </div>
         </div>
       </section>
