@@ -366,10 +366,7 @@ export default function HomePage() {
                 Join wait-list
               </button>
 
-              {/* Social proof */}
-              <p className="text-gray-500 text-sm mt-4 animate-fade-in-up stagger-7 font-poppins" style={{ fontWeight: '700' }}>
-                2,147 professionals already joined
-              </p>
+
             </form>
           </div>
         </div>
