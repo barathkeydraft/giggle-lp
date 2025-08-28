@@ -25,11 +25,11 @@ export default function Home() {
         </div>
 
         {/* Center copy with updated typography styles */}
-        <div className="px-2 sm:px-6 w-full max-w-6xl text-center mt-4 sm:mt-8" style={{ 
+        <div className="px-4 sm:px-6 w-full max-w-6xl text-center mt-4 sm:mt-8" style={{ 
           fontFamily: 'Neue Montreal, sans-serif',
           fontWeight: 400,
-          fontSize: 'clamp(24px, 6vw, 34px)',
-          lineHeight: 'clamp(32px, 8vw, 42px)',
+          fontSize: 'clamp(20px, 5vw, 34px)',
+          lineHeight: 'clamp(28px, 7vw, 42px)',
           letterSpacing: '0%',
           textAlign: 'center',
         }}>
@@ -39,7 +39,7 @@ export default function Home() {
           <p className="text-white/90 mb-3 sm:mb-4">
             crazy enough to dream it, bold enough to try.
           </p>
-          <p className="text-white/90 mb-3 sm:mb-4 whitespace-nowrap">
+          <p className="text-white/90 mb-3 sm:mb-4">
             What started as a vision became the way the world works, connects, and thrives.
           </p>
 

@@ -165,7 +165,7 @@ export default function HomePage() {
       {/* Pilot, Progress and Handover : Simplified */}
       <section className="bg-[#1C1B1F] text-white px-6 sm:px-10 py-16">
         <div className="mx-auto max-w-6xl">
-          <h3 className="text-center text-3xl sm:text-4xl font-semibold scroll-fade-in-up">
+          <h3 className="text-center text-3xl sm:text-4xl font-semibold">
             Pilot, Progress and Handover :
             <br />
             <span className="inline-block mt-2">Simplified</span>
@@ -173,7 +173,7 @@ export default function HomePage() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {/* Card 1 */}
-            <div className="rounded-2xl bg-white/5 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-8 text-center hover:bg-white/7 transition scroll-fade-in-up">
+            <div className="rounded-2xl bg-white/5 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-8 text-center hover:bg-white/7 transition">
               <div className="mb-6 flex justify-center">
                 <Image
                   src="/endless-email.svg"
@@ -188,7 +188,7 @@ export default function HomePage() {
             </div>
 
             {/* Card 2 */}
-            <div className="rounded-2xl bg-white/5 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-8 text-center hover:bg-white/7 transition scroll-fade-in-up">
+            <div className="rounded-2xl bg-white/5 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-8 text-center hover:bg-white/7 transition">
               <div className="mb-6 flex justify-center">
                 <Image
                   src="/invoice.svg"
@@ -203,7 +203,7 @@ export default function HomePage() {
             </div>
 
             {/* Card 3 */}
-            <div className="rounded-2xl bg-white/5 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-8 text-center hover:bg-white/7 transition scroll-fade-in-up">
+            <div className="rounded-2xl bg-white/5 border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.35)] p-8 text-center hover:bg-white/7 transition">
               <div className="mb-6 flex justify-center">
                 <Image
                   src="/followup.svg"
@@ -238,13 +238,13 @@ export default function HomePage() {
 
         <div className="relative z-10">
           <div className="mx-auto max-w-6xl text-center">
-            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-16 scroll-fade-in-up font-poppins" style={{ fontWeight: '700' }}>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-16 font-poppins" style={{ fontWeight: '700' }}>
               One workspace, zero friction
             </h2>
 
             <div className="grid gap-8 md:grid-cols-3">
               {/* Contract-to-Cash */}
-              <div className="text-center scroll-fade-in-up">
+              <div className="text-center">
                 <div className="mb-6 flex justify-center">
                   <Image
                     src="/contract-agreement.svg"
@@ -262,7 +262,7 @@ export default function HomePage() {
               </div>
 
               {/* Live project timeline */}
-              <div className="text-center scroll-fade-in-up">
+              <div className="text-center">
                 <div className="mb-6 flex justify-center">
                   <Image
                     src="/project-timeline.svg"
@@ -280,7 +280,7 @@ export default function HomePage() {
               </div>
 
               {/* Smart nudges */}
-              <div className="text-center scroll-fade-in-up">
+              <div className="text-center">
                 <div className="mb-6 flex justify-center">
                   <Image
                     src="/smart-nudges.svg"
@@ -307,12 +307,12 @@ export default function HomePage() {
       {/* Built by a team that has walked the talk */}
       <section id="about" className="bg-white text-black px-6 sm:px-10 py-20 overflow-hidden">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-4xl sm:text-5xl font-bold mb-16 scroll-fade-in-up font-poppins" style={{ fontWeight: '700' }}>
+          <h2 className="text-center text-4xl sm:text-5xl font-bold mb-16 font-poppins" style={{ fontWeight: '700' }}>
             Built by a team that has walked the talk
           </h2>
 
           {/* Comparison box */}
-          <div className="rounded-3xl overflow-hidden shadow-2xl scroll-fade-in-up">
+          <div className="rounded-3xl overflow-hidden shadow-2xl">
             <div className="grid md:grid-cols-2">
               {/* Left: Pieced-together toolchain */}
               <div className="bg-white p-12 group">
@@ -367,7 +367,7 @@ export default function HomePage() {
       {/* Be first in line—get 3 months free & shape the roadmap */}
       <section className="bg-black text-white px-6 sm:px-10 py-20">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-12 scroll-fade-in-up font-poppins" style={{ fontWeight: '700' }}>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-12 font-poppins" style={{ fontWeight: '700' }}>
             Early bird gets the worm; Join the waitlist now and get exclusive early access.
           </h2>
 
@@ -535,41 +535,7 @@ export default function HomePage() {
         </div>
       </footer>
 
-      {/* Scroll animation script */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            document.addEventListener('DOMContentLoaded', function() {
-              // Handle scroll-triggered animations
-              const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-              };
-              
-              const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    // Add 'active' class to trigger scroll animations
-                    if (entry.target.classList.contains('scroll-fade-in-up') ||
-                        entry.target.classList.contains('scroll-fade-in-left') ||
-                        entry.target.classList.contains('scroll-fade-in-right') ||
-                        entry.target.classList.contains('scroll-scale-in')) {
-                      entry.target.classList.add('active');
-                    }
-                  }
-                });
-              }, observerOptions);
-              
-              // Observe all elements with scroll animation classes
-              document.querySelectorAll('.scroll-fade-in-up, .scroll-fade-in-left, .scroll-fade-in-right, .scroll-scale-in').forEach(el => {
-                observer.observe(el);
-              });
-              
-              console.log('Scroll animations ready - elements will animate when they come into view');
-            });
-          `
-        }}
-      />
+
     </main>
   );
 }
