@@ -520,7 +520,7 @@ export default function HomePage() {
               <a href="#contact" className="block text-white hover:text-white/80 transition-colors duration-300 text-xl font-medium">
                 Contact Us
               </a>
-              <a href="mailto:gogo@giggle.global" className="block text-white hover:text-white/80 transition-colors duration-300 text-xl font-medium">
+              <a href="mailto:gogo@giggle.global" className="block text-white hover:text-white/80 transition-colors duration-300 text-xl font-medium mb-6">
                 Email: gogo@giggle.global
               </a>
             </div>
