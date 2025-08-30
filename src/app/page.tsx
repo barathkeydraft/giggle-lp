@@ -27,44 +27,47 @@ export default function Home() {
         {/* Center copy with updated typography styles */}
         <div className="px-4 sm:px-6 w-full max-w-6xl text-center mt-4 sm:mt-8" style={{ 
           fontFamily: 'Neue Montreal, sans-serif',
-          fontWeight: 400,
+          fontWeight: 300,
           fontSize: 'clamp(20px, 5vw, 34px)',
           lineHeight: 'clamp(28px, 7vw, 42px)',
           letterSpacing: '0%',
           textAlign: 'center',
         }}>
-          <p className="text-white/90 mb-3 sm:mb-4">
-            Every part of the lifestyle we live started with just a handful of people;
-          </p>
-          <p className="text-white/90 mb-3 sm:mb-4">
-            crazy enough to dream it, bold enough to try.
-          </p>
-          <p className="text-white/90 mb-3 sm:mb-4">
-            What started as a vision became the way the world works, connects, and thrives.
-          </p>
+          {/* Group 1: Vision and lifestyle */}
+          <div className="mb-12">
+            <p className="text-white/90 mb-0">
+              Every part of the lifestyle we live started with just a handful of people;
+            </p>
+            <p className="text-white/90 mb-0">
+              crazy enough to dream it, bold enough to try.
+            </p>
+            <p className="text-white/90 mb-0" style={{ whiteSpace: 'nowrap' }}>
+              What started as a vision became the way the world works, connects, and thrives.
+            </p>
+          </div>
 
-          <div className="h-4 sm:h-6 mt-2" />
+          {/* Group 2: Our turn and invitation */}
+          <div className="mb-12">
+            <p className="mb-0">
+              Now it&#39;s our turn.
+            </p>
+            <p className="mb-0">
+              And we want you in it.
+            </p>
+            <p className="mb-0">
+              Not as a customer, as a fellow visionary.
+            </p>
+          </div>
 
-          <p className="mb-3 sm:mb-4">
-            Now it&#39;s our turn.
-          </p>
-          <p className="mb-3 sm:mb-4">
-            And we want you in it.
-          </p>
-          <p className="mb-3 sm:mb-4">
-            Not as a customer,  as a fellow visionary.
-          </p>
-         
-
-          <div className="h-4 sm:h-6 mt-4" />
-
-
-          <p className="text-white/90 mb-3 sm:mb-4">
-            Together, we&#39;re not just changing the way we live.
-          </p>
-          <p className="text-white/90 mb-3 sm:mb-4">
-            We&#39;re creating something so big, it becomes <span className="italic">culture</span>.
-          </p>
+          {/* Group 3: Changing the world and culture */}
+          <div>
+            <p className="text-white/90 mb-0">
+              Together, we&#39;re not just changing the way we live.
+            </p>
+            <p className="text-white/90 mb-0">
+              We&#39;re creating something so profound, it becomes <span className="italic">culture</span>.
+            </p>
+          </div>
         </div>
 
         {/* Bottom wordmark */}
