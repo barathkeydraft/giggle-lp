@@ -58,10 +58,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/TopLogo.png', sizes: 'any' },
+      { url: '/TopLogo.png', sizes: 'any', type: 'image/png' },
+      { url: '/TopLogo.png', sizes: '16x16', type: 'image/png' },
+      { url: '/TopLogo.png', sizes: '32x32', type: 'image/png' },
+      { url: '/TopLogo.png', sizes: '48x48', type: 'image/png' },
     ],
     shortcut: '/TopLogo.png',
     apple: '/TopLogo.png',
+    other: [
+      { rel: 'icon', url: '/TopLogo.png', type: 'image/png' },
+    ],
   },
   manifest: '/manifest.json',
 };
@@ -73,6 +79,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/TopLogo.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/TopLogo.png" type="image/png" sizes="16x16" />
+        <link rel="shortcut icon" href="/TopLogo.png" />
+        <link rel="apple-touch-icon" href="/TopLogo.png" />
+        <meta name="msapplication-TileImage" content="/TopLogo.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >

@@ -41,7 +41,7 @@ export default function Home() {
             <p className="text-white/90 mb-0">
               crazy enough to dream it, bold enough to try.
             </p>
-            <p className="text-white/90 mb-0" style={{ whiteSpace: 'nowrap' }}>
+            <p className="text-white/90 mb-0">
               What started as a vision became the way the world works, connects, and thrives.
             </p>
           </div>
