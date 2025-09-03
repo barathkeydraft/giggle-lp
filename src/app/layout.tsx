@@ -58,15 +58,15 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/TopLogo.png', sizes: 'any', type: 'image/png' },
-      { url: '/TopLogo.png', sizes: '16x16', type: 'image/png' },
-      { url: '/TopLogo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/TopLogo.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+      { url: '/favicon.svg', sizes: '16x16', type: 'image/svg+xml' },
+      { url: '/favicon.svg', sizes: '32x32', type: 'image/svg+xml' },
+      { url: '/favicon.svg', sizes: '48x48', type: 'image/svg+xml' },
     ],
-    shortcut: '/TopLogo.png',
-    apple: '/TopLogo.png',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
     other: [
-      { rel: 'icon', url: '/TopLogo.png', type: 'image/png' },
+      { rel: 'icon', url: '/favicon.svg', type: 'image/svg+xml' },
     ],
   },
   manifest: '/manifest.json',
@@ -80,11 +80,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/TopLogo.png" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/TopLogo.png" type="image/png" sizes="16x16" />
-        <link rel="shortcut icon" href="/TopLogo.png" />
-        <link rel="apple-touch-icon" href="/TopLogo.png" />
-        <meta name="msapplication-TileImage" content="/TopLogo.png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <meta name="msapplication-TileImage" content="/favicon.svg" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
