@@ -59,9 +59,6 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
-      { url: '/favicon.svg', sizes: '16x16', type: 'image/svg+xml' },
-      { url: '/favicon.svg', sizes: '32x32', type: 'image/svg+xml' },
-      { url: '/favicon.svg', sizes: '48x48', type: 'image/svg+xml' },
     ],
     shortcut: '/favicon.svg',
     apple: '/favicon.svg',
@@ -79,13 +76,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="shortcut icon" href="/favicon.svg" />
-        <link rel="apple-touch-icon" href="/favicon.svg" />
-        <meta name="msapplication-TileImage" content="/favicon.svg" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
