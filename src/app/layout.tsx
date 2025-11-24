@@ -58,16 +58,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
-      { url: '/favicon.ico', sizes: '16x16 32x32 48x48', type: 'image/x-icon' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
     ],
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
-    other: [
-      { rel: 'icon', url: '/favicon.svg', type: 'image/svg+xml' },
-    ],
+    apple: '/apple-touch-icon.png',
   },
-  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
